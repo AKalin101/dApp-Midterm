@@ -1,11 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: lightblue;
+    /* background-color: lightblue; */
+    background-image: url('images/Javier2.jpg');
+    background-size: cover;       /* Make the image cover the entire element */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center;  /* Center the image */
     display: flex;
     flex-direction: column;
     align-items: center;      /* Horizontally center */
     justify-content: center;  /* Vertically center */
     height: 100vh;            /* Take full viewport height */
-    margin: 0;                /* Reset default margin */
+    margin: 0;                
+}
+
+h1 {
+    padding: 20px;
+    color: white;
+}
+
+p {
+    padding: 40px;
+    color: white;
+    font-size: 20px;  
+    text-align: center;
+
+}
+
+.voteContainer {
+    display: flex;
+}
+
+.vote {
+    margin: auto 0;
 }
 
 #voteForPlayStation, #voteForXbox {
@@ -17,14 +48,45 @@ body {
     text-align: center;       /* Center the text */
 }
 
+#voteForSteam, #voteForSteam {
+    font-size: 20px;          /* Increase font size */
+    padding: 15px 30px;       /* Increase padding (vertical horizontal) */
+    margin: 10px;             /* Add some space between buttons */
+    border: none;             /* Remove default browser styles */
+    cursor: pointer;          /* Add pointer cursor for better UX */
+    text-align: center;       /* Center the text */
+}
+
+#voteForNintendo, #voteForNintendo {
+    font-size: 20px;          /* Increase font size */
+    padding: 15px 30px;       /* Increase padding (vertical horizontal) */
+    margin: 10px;             /* Add some space between buttons */
+    border: none;             /* Remove default browser styles */
+    cursor: pointer;          /* Add pointer cursor for better UX */
+    text-align: center;       /* Center the text */
+}
+
 #voteForPlayStation {
     border-radius: 12px;
-    background-color: blue;
+    background-color: rgba(0, 0, 255, 0.685);
     color: white;
 }
 
 #voteForXbox {
     border-radius: 12px;
-    background-color: rgb(0, 255, 51);
+    background-color: rgb(0, 221, 255);
     color: white;
 }
+
+#voteForSteam {
+    border-radius: 12px;
+    background-color: rgb(191, 0, 255);
+    color: white;
+}
+
+#voteForNintendo {
+    border-radius: 12px;
+    background-color: rgb(255, 0, 247);
+    color: white;
+}
+

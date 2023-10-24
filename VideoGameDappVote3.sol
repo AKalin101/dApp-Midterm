@@ -1,45 +1,34 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.9;
 
-contract ConsoleVote {
-
-    // Data structure to hold the number of votes for each console
-    struct VoteCount {
-        uint playstationVotes;
-        uint xboxVotes;
-    }
-
-    VoteCount public votes;
-
-    // Keep track of addresses that have voted to prevent double voting
-    mapping(address => bool) public hasVoted;
-
-    // Events to log when a vote is cast
-    event VotedPlayStation(address indexed voter);
-    event VotedXbox(address indexed voter);
+contract VideoGameDappVoteV4 {
+    uint8 playstationVotes;
+    uint8 xboxVotes;
+    uint8 steamVotes;
+    uint8 nintendoVotes;
 
     // Function to cast a vote for PlayStation
     function votePlayStation() public {
-        require(!hasVoted[msg.sender], "You have already voted!");
-
-        votes.playstationVotes += 1;
-        hasVoted[msg.sender] = true;
-
-        emit VotedPlayStation(msg.sender);
+        playstationVotes += 1;
     }
 
     // Function to cast a vote for Xbox
     function voteXbox() public {
-        require(!hasVoted[msg.sender], "You have already voted!");
+        xboxVotes += 1;
+    }
 
-        votes.xboxVotes += 1;
-        hasVoted[msg.sender] = true;
+      // Function to cast a vote for Steam
+    function voteSteam() public {
+        steamVotes += 1;
+    }
 
-        emit VotedXbox(msg.sender);
+       // Function to cast a vote for Nintendo
+    function voteNintendo() public {
+        nintendoVotes += 1;
     }
 
     // Getter function to retrieve the current vote counts
-    function getVotes() public view returns (uint playstation, uint xbox) {
-        return (votes.playstationVotes, votes.xboxVotes);
+    function getVotes() public view returns (uint playstation, uint xbox,  uint steam, uint nintendo) {
+        return (playstationVotes, xboxVotes, steamVotes, nintendoVotes);
     }
 }

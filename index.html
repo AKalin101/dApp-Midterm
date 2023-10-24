@@ -10,16 +10,43 @@
     <script type="application/javascript" src="ethers-5.2.umd.min.js"></script>
     <script src="abi.js"></script>
     <script src="main.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    
     
     <title>Consoles</title>
 </head>
 <body>
-    <h1>Video Game List</h1>
-    <p> Please choose Playstation or Xbox as your preferred console.</p>
+    <h1>What system do you prefer to play video games on?</h1>
+    <p> Please choose one of the four options below</p>
   
-    <button id="voteForPlayStation">Vote for PlayStation</button>
-    <button id="voteForXbox">Vote for Xbox</button>
+
+
+    <div class="voteContainer">
+        <button id="voteForPlayStation">Vote for PlayStation</button>
+        <p id="playstationVotes" class="vote"></p>
+    </div>
+    
+    <div class="voteContainer">
+        <button id="voteForXbox">Vote for Xbox</button>
+        <p id="xboxVotes" class="vote"></p>
+    </div>
+
+    <div class="voteContainer">
+        <button id="voteForSteam">Vote for Steam</button>
+        <p id="steamVotes" class="vote"></p>
+    </div>
+
+    <div class="voteContainer">
+        <button id="voteForNintendo">Vote for Nintendo</button>
+        <p id="nintendoVotes" class="vote"></p>
+    </div>
+
+    <p>Which ever system gets 10 votes first, Doug will persoanlly supply the class with said *console* <br> Thank you, Doug! :)</p>
+  
+ 
+
+
 
 </body>
 </html>
