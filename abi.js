@@ -1,4 +1,4 @@
-let contractAddress = "0x1491c05B84B45CA1f0d89D46B9209395EafA4DE9"
+let contractAddress = "0x7f1DEE6150E15F794100622E02E6F5F37905282E"
 let abi = 
 [
 	{
@@ -26,20 +26,6 @@ let abi =
 		],
 		"name": "VotedXbox",
 		"type": "event"
-	},
-	{
-		"inputs": [],
-		"name": "votePlayStation",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "voteXbox",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	},
 	{
 		"inputs": [],
@@ -80,6 +66,20 @@ let abi =
 	},
 	{
 		"inputs": [],
+		"name": "votePlayStation",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "voteXbox",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
 		"name": "votes",
 		"outputs": [
 			{
@@ -97,4 +97,3 @@ let abi =
 		"type": "function"
 	}
 ]
-

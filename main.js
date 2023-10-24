@@ -135,16 +135,17 @@
         const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
         await provider.send("eth_requestAccounts", []);
         signer = provider.getSigner();
-        contract = new ethers.Contract(contractAddress, contractABI, provider);
+        contract = new ethers.Contract(contractAddress, abi, provider);
         contractWithSigner = contract.connect(signer);
     
     //code from Chat-GBT
     $('#voteForPlayStation').on("click", function() {
-      voteForPlayStation()
+      //voteForPlayStation()
+      contractWithSigner.votePlayStation()
     })
   
     $('#voteForXbox').on("click", function() {
-      voteForXbox()
+      contractWithSigner.voteXbox()
     })
   
     // Function to vote for PlayStation
