@@ -138,6 +138,7 @@
         contract = new ethers.Contract(contractAddress, contractABI, provider);
         contractWithSigner = contract.connect(signer);
     
+    //code from Chat-GBT
     $('#voteForPlayStation').on("click", function() {
       voteForPlayStation()
     })
